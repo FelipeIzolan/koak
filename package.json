@@ -1,6 +1,6 @@
 {
-  "name": "koak",
-  "version": "1.0.0",
+  "name": "coak",
+  "version": "1.0.1",
   "description": "simple logger with stream support.",
   "main": "dist/index.js",
   "files": [
@@ -13,18 +13,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FelipeIzolan/koak.git"
+    "url": "git+https://github.com/FelipeIzolan/coak.git"
   },
   "keywords": [
     "log",
-    "logger"
+    "logger",
+    "stream"
   ],
   "author": "Felipe Izolan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FelipeIzolan/koak/issues"
+    "url": "https://github.com/FelipeIzolan/coak/issues"
   },
-  "homepage": "https://github.com/FelipeIzolan/koak#readme",
+  "homepage": "https://github.com/FelipeIzolan/coak#readme",
   "devDependencies": {
     "@types/node": "^24.1.0"
   }

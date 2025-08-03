@@ -39,7 +39,7 @@ export const json = (data: string[], level: Level) => {
   });
 }
 
-export default function koak(options: { label?: string, stream?: Writable } = {}): Logger {
+export default function coak(options: { label?: string, stream?: Writable } = {}): Logger {
   let {
     label,
     stream

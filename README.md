@@ -1,40 +1,40 @@
-# 🌴 koak
+# 🌴 coak
 
 <img width="625" height="181" alt="image" src="https://github.com/user-attachments/assets/dd6bc2e2-859f-4b92-9a6d-2cc2f5cd0a03" />
 
 ## 📥 Install
 
 ```
-npm install koak
+npm install coak
 ```
 
 ## 🚀 Usage
 
 ```js
-import koak from "koak";
+import coak from "coak";
 import { createWriteStream } from "fs";
 
 const stream = createWriteStream('log.json');
-const logger = koak({ label: 'your-label', stream });
+const logger = coak({ label: 'your-label', stream });
 
-logger.info('Hello from koak!');
+logger.info('Hello from coak!');
 logger.end(); // <- end stream;
 ```
 
 ## 📓 Documentation
 
-### koak(opts)
+### coak(opts)
 
-koak is the default export. It accepts an optional configuration object:
+coak is the default export. It accepts an optional configuration object:
 - `label`: Adds a custom label to each log entry;
 - `stream`: A writable stream where logs will be written in JSON format;
 ```js
-import koak from "koak";
-const logger = koak();
+import coak from "coak";
+const logger = coak();
 ```
 
 ### Logger
-The logger object returned by `koak()` exposes the following methods:
+The logger object returned by `coak()` exposes the following methods:
 - `info(...data)` - Creates an info-level log (level 0);
 - `warn(...data)` - Creates a warning-log (level 1);
 - `error(...data)` - Creates a error-log (level 2);
@@ -48,13 +48,13 @@ The logger object returned by `koak()` exposes the following methods:
 To ensure your stream ends properly and your JSON log is fully written when the process exits, use `process.on()` to handle exit signals:
 
 ```js
-import koak from "koak";
+import coak from "coak";
 import { createWriteStream } from "fs";
 
 const stream = createWriteStream('log.json');
-const logger = koak({ label: 'your-label', stream });
+const logger = coak({ label: 'your-label', stream });
 
-logger.info('Hello from koak!');
+logger.info('Hello from coak!');
 
 const exit = () => {
   logger.end();
@@ -67,5 +67,5 @@ process.on('SIGINT', exit); // <- CTRL + C
 
 ## 📜 Licenses
 
-- [koak](https://github.com/felipeizolan/koak) - MIT
+- [coak](https://github.com/felipeizolan/coak) - MIT
 - [typescript](https://github.com/microsoft/TypeScript) - Apache-2.0

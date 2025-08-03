@@ -1,4 +1,4 @@
-import koak from "./dist/index.js"
+import coak from "./dist/index.js"
 
 import test from "node:test";
 import { Writable } from "node:stream";
@@ -12,7 +12,7 @@ test("JSON Stream", (_, done) => {
     }
   });
 
-  let logger = koak({ label: 'test', stream });
+  let logger = coak({ label: 'test', stream });
 
   logger.info('log1');
   logger.warn('log2', 'log2');
