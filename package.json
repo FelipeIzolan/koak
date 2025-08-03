@@ -1,0 +1,31 @@
+{
+  "name": "koak",
+  "version": "1.0.0",
+  "description": "simple and lightweight Node.js logger with no dependencies and stream support.",
+  "main": "dist/index.js",
+  "files": [
+    "./dist/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeIzolan/koak.git"
+  },
+  "keywords": [
+    "log",
+    "logger"
+  ],
+  "author": "Felipe Izolan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FelipeIzolan/koak/issues"
+  },
+  "homepage": "https://github.com/FelipeIzolan/koak#readme",
+  "devDependencies": {
+    "@types/node": "^24.1.0"
+  }
+}
