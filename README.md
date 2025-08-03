@@ -1,6 +1,6 @@
-# koak
+# 🌴 koak
 
-simple logger with stream support.
+<img width="625" height="181" alt="image" src="https://github.com/user-attachments/assets/dd6bc2e2-859f-4b92-9a6d-2cc2f5cd0a03" />
 
 ## 📥 Install
 
@@ -26,8 +26,22 @@ logger.end(); // <- end stream;
 ### koak(opts)
 
 koak is the default export. It accepts an optional configuration object:
-- `label`: Adds a custom label to each log entry.
-- `stream`: A writable stream where logs will be written in JSON format.
+- `label`: Adds a custom label to each log entry;
+- `stream`: A writable stream where logs will be written in JSON format;
+```js
+import koak from "koak";
+const logger = koak();
+```
+
+### Logger
+The logger object returned by `koak()` exposes the following methods:
+- `info(...data)` - Creates an info-level log (level 0);
+- `warn(...data)` - Creates a warning-log (level 1);
+- `error(...data)` - Creates a error-log (level 2);
+- `write(data, level)` *(stream-only)* - Writes a log directly to the JSON stream;
+- `end()` *(stream-only)* - Finalizes the JSON and ends the writable stream;
+
+## 🍪 Recipes
 
 ### End stream on process exit
 
