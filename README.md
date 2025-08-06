@@ -43,6 +43,33 @@ The logger object returned by `coak()` exposes the following methods:
 
 ## 🍪 Recipes
 
+### Middleware (express-like)
+
+```js
+import coak from "coak";
+import express from "express";
+
+const app = express();
+const logger = coak();
+
+// --- middleware
+app.use((req, res, next) => {
+  logger.info(req.method, req.path);
+  next();
+});
+// ---
+
+app.get('/', (req, res) => {
+  res.end('Hello, World!');
+});
+
+app.listen(3000, (err) => {
+  if (err)
+    throw err;
+  logger.info('PORT: 3000');
+});
+```
+
 ### End stream on process exit
 
 To ensure your stream ends properly and your JSON log is fully written when the process exits, use `process.on()` to handle exit signals:
